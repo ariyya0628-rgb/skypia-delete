@@ -1,0 +1,88 @@
+{
+  "login_url": "https://skypiea-5729766ef843.herokuapp.com/users/sign_in",
+  "product_management_url": "",
+  "listing_candidates_url": "",
+  "default_display_count": 200,
+  "fallback_display_counts": [100, 50],
+  "disabled_display_counts": [500, 1000],
+  "item_number_delete_chunk_size": 50,
+  "item_number_delete_fallback_chunk_sizes": [30, 10, 1],
+  "wait_after_delete_seconds": 5,
+  "max_retry": 2,
+  "page_load_timeout_seconds": 60,
+  "search_timeout_seconds": 60,
+  "delete_confirm_timeout_seconds": 60,
+  "delete_complete_timeout_seconds": 120,
+  "restart_browser_every_loops": 20,
+  "save_screenshot_on_error": true,
+  "asin_ng_register": false,
+  "headless": false,
+  "slow_mo_ms": 0,
+  "selectors": {
+    "login_email": [
+      "input[name='user[email]']",
+      "input[type='email']",
+      "input[name='email']"
+    ],
+    "login_password": [
+      "input[name='user[password]']",
+      "input[type='password']",
+      "input[name='password']"
+    ],
+    "login_submit": [
+      "input[type='submit']",
+      "button[type='submit']",
+      "text=ログイン"
+    ],
+    "login_success": [
+      "text=商品管理",
+      "text=ログアウト",
+      "text=出品選択"
+    ],
+    "product_management_link": [
+      "text=商品管理",
+      "a:has-text('商品管理')"
+    ],
+    "product_management_ready": [
+      "text=商品管理",
+      "text=商品番号",
+      "input[name*='item']"
+    ],
+    "asin_ng_checkbox": [
+      "label:has-text('対象のASINをNG登録する') input[type='checkbox']",
+      "input[type='checkbox'][name*='asin']"
+    ],
+    "item_number_search_input": [
+      "textarea[name*='item']",
+      "textarea[name*='number']",
+      "input[name*='item_number']"
+    ],
+    "item_number_search_submit": [
+      "button:has-text('検索')",
+      "input[type='submit'][value*='検索']"
+    ],
+    "item_number_result_row": [
+      "table tbody tr",
+      ".items tbody tr"
+    ],
+    "item_number_select_all": [
+      "input[type='checkbox'][name*='all']",
+      "thead input[type='checkbox']"
+    ],
+    "selected_items_delete_button": [
+      "button:has-text('選択データを削除')",
+      "a:has-text('選択データを削除')",
+      "input[type='submit'][value*='削除']"
+    ],
+    "delete_confirm_button": [
+      "button:has-text('選択データを削除')",
+      "button:has-text('削除する')",
+      "input[type='submit'][value*='削除']"
+    ],
+    "delete_complete": [
+      "text=削除しました",
+      "text=削除が完了",
+      "text=商品管理"
+    ]
+  }
+}
